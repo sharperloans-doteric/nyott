@@ -1,1 +1,2847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17961008558"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17961008558');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyota Fund - Affordable Loans in Kenya</title>
+    <meta name="google-site-verification" content="L7E8vJ83esogeRsgkLefcQfjHHZYst2RfuB6C0HYldM" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+      
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80"><rect width="120" height="80" fill="%23006c00"/><path d="M0 0 L120 80 M120 0 L0 80" stroke="%23ffffff" stroke-width="8"/><circle cx="60" cy="40" r="20" fill="%23ce1126"/><circle cx="60" cy="40" r="16" fill="%23006c00"/><path d="M60 24 L65 40 L80 40 L68 50 L73 66 L60 54 L47 66 L52 50 L40 40 L55 40 Z" fill="%23ffffff"/></svg>');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+      
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+      
+        /* Page Styles */
+        .page {
+            display: none;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+      
+        .page.active {
+            display: block;
+        }
+      
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+      
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+      
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+      
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+      
+        .logo h1 {
+            font-size: 24px;
+            color: #006c00;
+            font-weight: 700;
+        }
+      
+        .logo span {
+            color: #ce1126;
+        }
+      
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+      
+        nav ul li {
+            margin-left: 25px;
+        }
+      
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+      
+        nav ul li a:hover {
+            color: #006c00;
+        }
+      
+        .cta-button {
+            background-color: #ce1126;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+      
+        .cta-button:hover {
+            background-color: #a50e1f;
+        }
+      
+        .register-btn {
+            background-color: #006c00;
+            margin-left: 10px;
+        }
+      
+        .register-btn:hover {
+            background-color: #005000;
+        }
+      
+        .logout-btn {
+            background-color: #333;
+            margin-left: 10px;
+        }
+      
+        .logout-btn:hover {
+            background-color: #555;
+        }
+      
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+      
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+      
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+      
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+      
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+      
+        .btn-primary {
+            background-color: #ce1126;
+            color: white;
+        }
+      
+        .btn-primary:hover {
+            background-color: #a50e1f;
+            transform: translateY(-3px);
+        }
+      
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+      
+        .btn-secondary:hover {
+            background-color: white;
+            color: #333;
+            transform: translateY(-3px);
+        }
+      
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+      
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+      
+        .section-title h2 {
+            font-size: 36px;
+            color: #006c00;
+            margin-bottom: 15px;
+        }
+      
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+      
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+      
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+      
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+      
+        .feature-icon {
+            font-size: 40px;
+            color: #ce1126;
+            margin-bottom: 20px;
+        }
+      
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #006c00;
+        }
+      
+        /* Loan Calculator */
+        .calculator {
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+      
+        .calculator-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+      
+        .calculator h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+      
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+      
+        .form-group {
+            text-align: left;
+        }
+      
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+      
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+      
+        .calculator-result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            display: none;
+        }
+      
+        .calculator-result h3 {
+            margin-bottom: 10px;
+        }
+      
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+      
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+      
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+      
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #ce1126;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+      
+        .step h3 {
+            margin-bottom: 15px;
+            color: #006c00;
+        }
+      
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+      
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+      
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+        }
+      
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+      
+        .testimonial-author {
+            font-weight: 600;
+        }
+      
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 60px 0 20px;
+        }
+      
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+      
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ce1126;
+        }
+      
+        .footer-links {
+            list-style: none;
+        }
+      
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+      
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+      
+        .footer-links a:hover {
+            color: #ce1126;
+        }
+      
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+      
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+      
+        .social-icons a:hover {
+            color: #ce1126;
+        }
+      
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+      
+        /* Auth Page Styles */
+        .auth-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+      
+        .auth-container {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        }
+      
+        .auth-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+      
+        .auth-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+        }
+      
+        .auth-tab.active {
+            color: #ce1126;
+            border-bottom: 2px solid #ce1126;
+        }
+      
+        .auth-form {
+            display: none;
+        }
+      
+        .auth-form.active {
+            display: block;
+        }
+      
+        .auth-form h2 {
+            margin-bottom: 20px;
+            color: #006c00;
+            text-align: center;
+        }
+      
+        .auth-form .form-group {
+            margin-bottom: 15px;
+        }
+      
+        .auth-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+      
+        .auth-form .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+      
+        .auth-form .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+      
+        .auth-switch {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+      
+        .auth-switch a {
+            color: #ce1126;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+      
+        /* Loan Application Page */
+        .loan-application-page {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+        }
+      
+        .application-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+      
+        .application-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #006c00;
+        }
+      
+        .application-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+      
+        .form-full-width {
+            grid-column: 1 / -1;
+        }
+        .savings-fee-display {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ce1126;
+            margin-top: 10px;
+            display: none;
+        }
+        .savings-fee-display p {
+            margin: 0;
+            color: #006c00;
+            font-weight: 600;
+        }
+        /* Payment Page */
+        .payment-page {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+        }
+      
+        .payment-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+      
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #006c00;
+        }
+      
+        .payment-instructions {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ce1126;
+        }
+      
+        .payment-instructions h3 {
+            color: #006c00;
+            margin-bottom: 15px;
+        }
+      
+        .payment-instructions ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+      
+        .payment-instructions li {
+            margin-bottom: 10px;
+        }
+      
+        .payment-details {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+      
+        .payment-details h3 {
+            color: #006c00;
+            margin-bottom: 15px;
+        }
+      
+        .payment-amount {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ce1126;
+            margin: 15px 0;
+        }
+      
+        .till-number-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+      
+        .till-number {
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px dashed #ce1126;
+        }
+      
+        .copy-btn {
+            background-color: #006c00;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+      
+        .copy-btn:hover {
+            background-color: #005000;
+        }
+      
+        .copy-btn.copied {
+            background-color: #28a745;
+        }
+      
+        .mpesa-verification {
+            margin-top: 30px;
+        }
+      
+        .mpesa-verification h3 {
+            margin-bottom: 15px;
+            color: #006c00;
+        }
+      
+        .error-message {
+            color: #ce1126;
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            display: none;
+        }
+      
+        .verification-success {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+      
+        .verification-success i {
+            font-size: 60px;
+            color: #006c00;
+            margin-bottom: 20px;
+        }
+      
+        .verification-success h3 {
+            margin-bottom: 15px;
+            color: #006c00;
+        }
+      
+        /* Dashboard Page */
+        .dashboard-page {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+        }
+      
+        .dashboard-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+      
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+      
+        .dashboard-header h2 {
+            color: #006c00;
+        }
+      
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+      
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: #ce1126;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+      
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+      
+        .dashboard-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ce1126;
+        }
+      
+        .dashboard-card h3 {
+            color: #006c00;
+            margin-bottom: 10px;
+        }
+      
+        .dashboard-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+      
+        .dashboard-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+      
+        /* Profile Update Page */
+        .profile-page {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+        }
+      
+        .profile-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+      
+        .profile-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #006c00;
+        }
+      
+        .profile-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+      
+        .profile-success {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+      
+        .profile-success i {
+            font-size: 60px;
+            color: #006c00;
+            margin-bottom: 20px;
+        }
+      
+        .profile-success h3 {
+            margin-bottom: 15px;
+            color: #006c00;
+        }
+      
+        /* Welcome Message */
+        .welcome-message {
+            background-color: #e8f5e8;
+            border: 1px solid #006c00;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+      
+        .welcome-message h3 {
+            color: #006c00;
+            margin-bottom: 10px;
+        }
+      
+        .welcome-message p {
+            color: #333;
+            font-size: 16px;
+        }
+      
+        /* Popping Testimonials - Updated to bottom left */
+        .testimonial-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            max-width: 350px;
+            background: linear-gradient(135deg, #006c00, #ce1126);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+            text-align: left;
+        }
+      
+        .testimonial-popup.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+      
+        .testimonial-popup-content {
+            position: relative;
+        }
+      
+        .testimonial-popup-text {
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+      
+        .testimonial-popup-author {
+            font-weight: 600;
+            font-size: 14px;
+            color: #ffd700;
+        }
+      
+        .testimonial-popup-close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: white;
+            color: #ce1126;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+      
+        /* Loan Amount Slider Styles */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ff6b35 0%, #ff6b35 var(--progress, 10%), #e0e0e0 var(--progress, 10%), #e0e0e0 100%);
+            outline: none;
+            border-radius: 2px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        input[type="range"]:focus {
+            outline: 2px solid #ce1126;
+            outline-offset: 2px;
+        }
+        input[type="range"]::-webkit-slider-track {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 4px;
+            background: linear-gradient(to right, #ff6b35 0%, #ff6b35 var(--progress, 10%), #e0e0e0 var(--progress, 10%), #e0e0e0 100%);
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 2px solid #ce1126;
+            transition: all 0.3s ease;
+            position: relative;
+            transform: rotate(45deg);
+        }
+        input[type="range"]::-webkit-slider-thumb::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 8px;
+            height: 8px;
+            background: #ce1126;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: rotate(45deg) scale(1.2);
+            box-shadow: 0 4px 12px rgba(206, 18, 38, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+        input[type="range"]::-webkit-slider-thumb:active {
+            transform: rotate(45deg) scale(1.1);
+        }
+        input[type="range"]::-moz-range-track {
+            height: 6px;
+            background: linear-gradient(to right, #ff6b35 0%, #ff6b35 var(--progress, 10%), #e0e0e0 var(--progress, 10%), #e0e0e0 100%);
+            border-radius: 3px;
+            border: none;
+            cursor: pointer;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        input[type="range"]::-moz-range-thumb {
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ce1126;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            transform: rotate(45deg);
+        }
+        input[type="range"]::-moz-range-thumb:hover {
+            transform: rotate(45deg) scale(1.2);
+            box-shadow: 0 4px 12px rgba(206, 18, 38, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+        input[type="range"]::-moz-range-thumb:active {
+            transform: rotate(45deg) scale(1.1);
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+          
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+          
+            nav ul li {
+                margin: 5px 10px;
+            }
+          
+            .hero h2 {
+                font-size: 36px;
+            }
+          
+            .hero p {
+                font-size: 18px;
+            }
+          
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+          
+            .btn {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+          
+            .steps {
+                flex-direction: column;
+            }
+          
+            .application-form, .profile-form {
+                grid-template-columns: 1fr;
+            }
+          
+            .dashboard-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+          
+            .till-number-container {
+                flex-direction: column;
+            }
+          
+            .testimonial-popup {
+                max-width: 300px;
+                left: 10px;
+                bottom: 10px;
+            }
+          
+            .testimonial-popup-text {
+                font-size: 14px;
+            }
+        }
+      
+        @media (max-width: 480px) {
+            .testimonial-popup {
+                max-width: 250px;
+            }
+        }
+    </style>
+    <!-- Event snippet for Page view conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17961008558/bfsmCMrHxvobEK77vPRC',
+      'value': 1.0,
+      'currency': 'USD'
+  });
+</script>
+</head>
+<body>
+    <!-- Popping Testimonials Popup - Updated position -->
+    <div class="testimonial-popup" id="testimonial-popup">
+        <div class="testimonial-popup-content">
+            <button class="testimonial-popup-close" id="testimonial-close">×</button>
+            <p class="testimonial-popup-text" id="testimonial-popup-text">"Nyota Fund transformed my small business with their quick and affordable loan!"</p>
+            <p class="testimonial-popup-author" id="testimonial-popup-author">- Jane Wanjiku, Nairobi</p>
+        </div>
+    </div>
+    <!-- Home Page -->
+    <div class="page active" id="home-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <h2>Affordable Loans for Kenyans</h2>
+                <p>Get the financial support you need with flexible repayment options and competitive interest rates. Your dreams are within reach with Nyota Fund.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showAuthPage('register')">Apply for Loan</button>
+                    <button class="btn btn-secondary" onclick="showPage('calculator-page')">Loan Calculator</button>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Loan Products</h2>
+                    <p>We offer a variety of loan products tailored to meet your specific needs</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Personal Loans</h3>
+                        <p>Get funds for personal expenses, education, medical bills, or home improvements with flexible repayment terms.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Business Loans</h3>
+                        <p>Grow your business with our tailored financing solutions for startups, expansion, or working capital.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education Loans</h3>
+                        <p>Invest in your future with our education loans covering tuition, books, and living expenses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3>Agricultural Loans</h3>
+                        <p>Support your farming activities with loans for equipment, seeds, livestock, and farm expansion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Nyota Fund</h3>
+                        <p>Providing affordable financial solutions to Kenyans since 2015. Your trusted partner for personal and business loans.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loan Products</a></li>
+                            <li><a onclick="showPage('calculator-page')">Loan Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                            <li><i class="fas fa-phone"></i> +254 700 123 456</li>
+                            <li><i class="fas fa-envelope"></i> info@nyotafund.co.ke</li>
+                            <li><i class="fas fa-clock"></i> Mon-Fri: 8am-5pm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 Nyota Fund. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Loans Page -->
+    <div class="page" id="loans-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn-loans" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Loan Products</h2>
+                    <p>We offer a variety of loan products tailored to meet your specific needs</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Personal Loans</h3>
+                        <p>Get funds for personal expenses, education, medical bills, or home improvements with flexible repayment terms.</p>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Loan amount: KES 5,000 - 50,000</li>
+                            <li>Repayment period: 3 - 24 months</li>
+                            <li>Interest rate: 12% per annum</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Business Loans</h3>
+                        <p>Grow your business with our tailored financing solutions for startups, expansion, or working capital.</p>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Loan amount: KES 5,000 - 50,000</li>
+                            <li>Repayment period: 6 - 36 months</li>
+                            <li>Interest rate: 10% per annum</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education Loans</h3>
+                        <p>Invest in your future with our education loans covering tuition, books, and living expenses.</p>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Loan amount: KES 5,000 - 50,000</li>
+                            <li>Repayment period: 12 - 48 months</li>
+                            <li>Interest rate: 8% per annum</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3>Agricultural Loans</h3>
+                        <p>Support your farming activities with loans for equipment, seeds, livestock, and farm expansion.</p>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Loan amount: KES 5,000 - 50,000</li>
+                            <li>Repayment period: 6 - 24 months</li>
+                            <li>Interest rate: 9% per annum</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <button class="btn btn-primary" onclick="showAuthPage('register')">Apply for Loan Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Calculator Page -->
+    <div class="page" id="calculator-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn-calculator" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="calculator">
+            <div class="container">
+                <h2>Loan Calculator</h2>
+                <div class="calculator-container">
+                    <form class="calculator-form">
+                        <div class="form-group">
+                            <label for="loan-amount">Loan Amount (KES)</label>
+                            <input type="number" id="loan-amount" min="5000" max="100000" value="50000" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-term">Loan Term (Months)</label>
+                            <select id="loan-term" disabled>
+                                <option value="3">3 Months</option>
+                                <option value="6">6 Months</option>
+                                <option value="12" selected>12 Months</option>
+                                <option value="18">18 Months</option>
+                                <option value="24">24 Months</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest-rate">Interest Rate (%)</label>
+                            <input type="number" id="interest-rate" min="1" max="30" step="0.1" value="12" readonly>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="calculateLoan()">Calculate</button>
+                    </form>
+                    <div class="calculator-result" id="calculator-result">
+                        <h3>Your Loan Details</h3>
+                        <p>Monthly Payment: <strong id="monthly-payment">KES 0</strong></p>
+                        <p>Total Payment: <strong id="total-payment">KES 0</strong></p>
+                        <p>Total Interest: <strong id="total-interest">KES 0</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- How It Works Page -->
+    <div class="page" id="how-it-works-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn-how-it-works" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>How It Works</h2>
+                    <p>Getting a loan from Nyota Fund is simple and straightforward</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Apply Online</h3>
+                        <p>Fill out our simple online application form with your personal and financial details. It takes less than 10 minutes to complete.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Get Approved</h3>
+                        <p>Our team will review your application and provide approval within 24 hours. We have a 95% approval rate for qualified applicants.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Receive Funds</h3>
+                        <p>Once approved, the funds will be disbursed directly to your bank account or M-Pesa within 2 hours of approval.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Repay Easily</h3>
+                        <p>Make convenient repayments through mobile banking, bank transfer, or M-Pesa. Set up automatic payments for hassle-free repayment.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <button class="btn btn-primary" onclick="showAuthPage('register')">Start Your Application</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Testimonials Page -->
+    <div class="page" id="testimonials-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn-testimonials" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Nyota Fund helped me expand my small business when no other lender would. The process was quick and the staff was very helpful. I received the funds in my account within 3 hours of approval!"</p>
+                        <p class="testimonial-author">- Jane Wanjiku, Nairobi</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I needed funds for my daughter's university education. Nyota Fund provided a loan with reasonable terms that made it possible. The flexible repayment options have been a lifesaver for our family."</p>
+                        <p class="testimonial-author">- David Ochieng, Kisumu</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The agricultural loan I received helped me purchase better seeds and equipment. My harvest has doubled this season! I'm now able to support my family and even hire two additional workers."</p>
+                        <p class="testimonial-author">- Mary Atieno, Nakuru</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"As a young entrepreneur, getting funding was challenging until I found Nyota Fund. They believed in my business idea and provided the capital I needed to get started. Highly recommended!"</p>
+                        <p class="testimonial-author">- Brian Kamau, Mombasa</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"When medical bills were piling up, Nyota Fund came through with a personal loan that saved us. The application was simple and the customer service was exceptional throughout the process."</p>
+                        <p class="testimonial-author">- Grace Auma, Eldoret</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I've taken three loans from Nyota Fund over the years for my retail business. Each time the process gets smoother. Their loyalty program with reduced interest rates for returning customers is fantastic."</p>
+                        <p class="testimonial-author">- Samuel Njoroge, Thika</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Contact Page -->
+    <div class="page" id="contact-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn-contact" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>We're here to help you achieve your financial goals. Get in touch with us today.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Our Office</h3>
+                        <p>Nyota Fund Building<br>Kenyatta Avenue<br>Nairobi, Kenya</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+254 700 123 456<br>+254 711 987 654<br>Mon-Fri: 8am-5pm</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>info@nyotafund.co.ke<br>support@nyotafund.co.ke<br>loans@nyotafund.co.ke</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Live Chat</h3>
+                        <p>Available during business hours<br>Quick responses<br>Expert assistance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Authentication Page -->
+    <div class="page" id="auth-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showAuthPage('login')">Login</button>
+                        <button class="cta-button register-btn" onclick="showAuthPage('register')">Register</button>
+                        <button class="cta-button logout-btn" id="logout-btn-auth" style="display: none;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="auth-page">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <div class="auth-tab active" id="login-tab">Login</div>
+                    <div class="auth-tab" id="register-tab">Register</div>
+                </div>
+              
+                <form class="auth-form active" id="login-form">
+                    <h2>Login to Your Account</h2>
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="auth-switch">
+                        Don't have an account? <a onclick="switchAuthTab('register')">Register here</a>
+                    </div>
+                </form>
+              
+                <form class="auth-form" id="register-form">
+                    <h2>Create New Account</h2>
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-phone">Phone Number</label>
+                        <input type="tel" id="register-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-county">County</label>
+                        <select id="register-county" required>
+                            <option value="">Select Your County</option>
+                            <option value="Mombasa">Mombasa</option>
+                            <option value="Kwale">Kwale</option>
+                            <option value="Kilifi">Kilifi</option>
+                            <option value="Tana River">Tana River</option>
+                            <option value="Lamu">Lamu</option>
+                            <option value="Taita Taveta">Taita Taveta</option>
+                            <option value="Garissa">Garissa</option>
+                            <option value="Wajir">Wajir</option>
+                            <option value="Mandera">Mandera</option>
+                            <option value="Marsabit">Marsabit</option>
+                            <option value="Isiolo">Isiolo</option>
+                            <option value="Meru">Meru</option>
+                            <option value="Tharaka Nithi">Tharaka Nithi</option>
+                            <option value="Embu">Embu</option>
+                            <option value="Kitui">Kitui</option>
+                            <option value="Machakos">Machakos</option>
+                            <option value="Makueni">Makueni</option>
+                            <option value="Nyandarua">Nyandarua</option>
+                            <option value="Nyeri">Nyeri</option>
+                            <option value="Kirinyaga">Kirinyaga</option>
+                            <option value="Murang'a">Murang'a</option>
+                            <option value="Kiambu">Kiambu</option>
+                            <option value="Turkana">Turkana</option>
+                            <option value="West Pokot">West Pokot</option>
+                            <option value="Samburu">Samburu</option>
+                            <option value="Trans Nzoia">Trans Nzoia</option>
+                            <option value="Uasin Gishu">Uasin Gishu</option>
+                            <option value="Elgeyo Marakwet">Elgeyo Marakwet</option>
+                            <option value="Nandi">Nandi</option>
+                            <option value="Baringo">Baringo</option>
+                            <option value="Laikipia">Laikipia</option>
+                            <option value="Nakuru">Nakuru</option>
+                            <option value="Narok">Narok</option>
+                            <option value="Kajiado">Kajiado</option>
+                            <option value="Kericho">Kericho</option>
+                            <option value="Bomet">Bomet</option>
+                            <option value="Kakamega">Kakamega</option>
+                            <option value="Vihiga">Vihiga</option>
+                            <option value="Bungoma">Bungoma</option>
+                            <option value="Busia">Busia</option>
+                            <option value="Siaya">Siaya</option>
+                            <option value="Kisumu">Kisumu</option>
+                            <option value="Homa Bay">Homa Bay</option>
+                            <option value="Migori">Migori</option>
+                            <option value="Kisii">Kisii</option>
+                            <option value="Nyamira">Nyamira</option>
+                            <option value="Nairobi">Nairobi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirm Password</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <div class="auth-switch">
+                        Already have an account? <a onclick="switchAuthTab('login')">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- Dashboard Page -->
+    <div class="page" id="dashboard-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="dashboard-page">
+            <div class="container">
+                <div class="dashboard-container">
+                    <div class="welcome-message" id="welcome-message">
+                        <h3>Welcome to Nyota Fund, <span id="welcome-user-name">User</span>!</h3>
+                        <p>We're excited to have you on board. Your financial journey starts here. Explore our loan products and take the first step towards achieving your goals.</p>
+                    </div>
+                  
+                    <div class="dashboard-header">
+                        <h2>Welcome to Your Dashboard, <span id="user-name">User</span>!</h2>
+                        <div class="user-info">
+                            <div class="user-avatar" id="user-avatar">U</div>
+                            <div>
+                                <div id="user-full-name">User</div>
+                                <div id="user-email"></div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="dashboard-cards">
+                        <div class="dashboard-card">
+                            <h3>Current Loan Balance</h3>
+                            <p id="current-balance">KES 0</p>
+                        </div>
+                        <div class="dashboard-card">
+                            <h3>Next Payment Due</h3>
+                            <p id="next-payment">No active loans</p>
+                        </div>
+                        <div class="dashboard-card">
+                            <h3>Credit Score</h3>
+                            <p id="credit-score">Good (720)</p>
+                        </div>
+                        <div class="dashboard-card">
+                            <h3>Available Credit</h3>
+                            <p id="available-credit">KES 100,000</p>
+                        </div>
+                    </div>
+                  
+                    <div class="dashboard-actions">
+                        <button class="btn btn-primary" onclick="applyForNewLoan()">Apply for New Loan</button>
+                        <button class="btn btn-secondary" onclick="showPage('profile-page')">Update Profile</button>
+                        <button class="btn btn-secondary">Make a Payment</button>
+                        <button class="btn btn-secondary">View Loan History</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Loan Application Page -->
+    <div class="page" id="loan-application-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showPage('dashboard-page')">Dashboard</button>
+                        <button class="cta-button logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="loan-application-page">
+            <div class="container">
+                <div class="application-container">
+                    <h2>Loan Application Form</h2>
+                    <form class="application-form" id="application-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="id-number">ID Number</label>
+                            <input type="text" id="id-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="county">County</label>
+                            <select id="county" required>
+                                <option value="">Select Your County</option>
+                                <option value="Mombasa">Mombasa</option>
+                                <option value="Kwale">Kwale</option>
+                                <option value="Kilifi">Kilifi</option>
+                                <option value="Tana River">Tana River</option>
+                                <option value="Lamu">Lamu</option>
+                                <option value="Taita Taveta">Taita Taveta</option>
+                                <option value="Garissa">Garissa</option>
+                                <option value="Wajir">Wajir</option>
+                                <option value="Mandera">Mandera</option>
+                                <option value="Marsabit">Marsabit</option>
+                                <option value="Isiolo">Isiolo</option>
+                                <option value="Meru">Meru</option>
+                                <option value="Tharaka Nithi">Tharaka Nithi</option>
+                                <option value="Embu">Embu</option>
+                                <option value="Kitui">Kitui</option>
+                                <option value="Machakos">Machakos</option>
+                                <option value="Makueni">Makueni</option>
+                                <option value="Nyandarua">Nyandarua</option>
+                                <option value="Nyeri">Nyeri</option>
+                                <option value="Kirinyaga">Kirinyaga</option>
+                                <option value="Murang'a">Murang'a</option>
+                                <option value="Kiambu">Kiambu</option>
+                                <option value="Turkana">Turkana</option>
+                                <option value="West Pokot">West Pokot</option>
+                                <option value="Samburu">Samburu</option>
+                                <option value="Trans Nzoia">Trans Nzoia</option>
+                                <option value="Uasin Gishu">Uasin Gishu</option>
+                                <option value="Elgeyo Marakwet">Elgeyo Marakwet</option>
+                                <option value="Nandi">Nandi</option>
+                                <option value="Baringo">Baringo</option>
+                                <option value="Laikipia">Laikipia</option>
+                                <option value="Nakuru">Nakuru</option>
+                                <option value="Narok">Narok</option>
+                                <option value="Kajiado">Kajiado</option>
+                                <option value="Kericho">Kericho</option>
+                                <option value="Bomet">Bomet</option>
+                                <option value="Kakamega">Kakamega</option>
+                                <option value="Vihiga">Vihiga</option>
+                                <option value="Bungoma">Bungoma</option>
+                                <option value="Busia">Busia</option>
+                                <option value="Siaya">Siaya</option>
+                                <option value="Kisumu">Kisumu</option>
+                                <option value="Homa Bay">Homa Bay</option>
+                                <option value="Migori">Migori</option>
+                                <option value="Kisii">Kisii</option>
+                                <option value="Nyamira">Nyamira</option>
+                                <option value="Nairobi">Nairobi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-type">Loan Type</label>
+                            <select id="loan-type" required>
+                                <option value="">Select Loan Type</option>
+                                <option value="personal">Personal Loan</option>
+                                <option value="business">Business Loan</option>
+                                <option value="education">Education Loan</option>
+                                <option value="agricultural">Agricultural Loan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-amount-app">Loan Amount (KES)</label>
+                            <select id="loan-amount-app" required>
+                                <option value="">Select Loan Amount</option>
+                                <option value="2000">KES 2,000</option>
+                                <option value="3500">KES 3,500</option>
+                                <option value="5000">KES 5,000</option>
+                                <option value="6500">KES 6,500</option>
+                                <option value="8000">KES 8,000</option>
+                                <option value="10000">KES 10,000</option>
+                                <option value="12500">KES 12,500</option>
+                                <option value="14000">KES 14,000</option>
+                                <option value="16000">KES 16,000</option>
+                                <option value="20000">KES 20,000</option>
+                                <option value="36000">KES 36,000</option>
+                                <option value="50000">KES 50,000</option>
+                            </select>
+                            <small style="color: #687964;">Loan amount must be between KES 2,000 and KES 50,000</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="employment">Employment Status</label>
+                            <select id="employment" required>
+                                <option value="">Select Employment Status</option>
+                                <option value="employed">Employed</option>
+                                <option value="self-employed">Self-Employed</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="income">Monthly Income (KES)</label>
+                            <select id="income" required>
+                                <option value="">Select Monthly Income Range</option>
+                                <option value="0-10000">0 to 10,000</option>
+                                <option value="10001-25000">10,001 to 25,000</option>
+                                <option value="25001-50000">25,001 to 50,000</option>
+                                <option value="50001-above">50,001 and above</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-full-width">
+                            <label for="purpose">Loan Purpose</label>
+                            <textarea id="purpose" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group form-full-width">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Payment Page -->
+    <div class="page" id="payment-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showPage('dashboard-page')">Dashboard</button>
+                        <button class="cta-button logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="payment-page">
+            <div class="container">
+                <div class="payment-container">
+                    <h2>Account Activation Payment</h2>
 
+                    <div class="payment-instructions">
+                        <h3>M-Pesa STK Push Payment</h3>
+                        <p>To activate your NYOTA FUND account and qualify for grant disbursement, NYOTA FUND in partnership with NSSF requires a one-time savings fee. An M-Pesa payment prompt will be sent directly to your phone. <strong>(REGULATED BY CBK)</strong></p>
+                    </div>
+
+                    <div class="payment-details">
+                        <h3>Payment Details</h3>
+                        <p>Amount: <strong id="payment-amount-display">KES ...</strong></p>
+                        <p style="margin-top:10px; color:#555;">Phone: <strong id="stk-phone-display">-</strong></p>
+                        <p id="status" style="margin-top:18px; font-size:16px; color:#555;"></p>
+                        <div style="margin-top:20px;">
+                            <button id="payBtn" class="btn btn-primary" onclick="handleStkPayment()">Send Payment Prompt to My Phone</button>
+                        </div>
+                    </div>
+
+                    <div class="verification-success" id="verification-success" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Payment Verified Successfully!</h3>
+                        <p>Your account savings fee payment has been verified. Your loan application is now complete and under review.</p>
+                        <p>We will contact you within 24 hours with the loan decision.</p>
+                        <button class="btn btn-primary" onclick="completeLoanApplication()">Return to Dashboard</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Profile Update Page -->
+    <div class="page" id="profile-page">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="showPage('home-page')">
+                        <h1>Nyota <span>Fund</span></h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a onclick="showPage('home-page')">Home</a></li>
+                            <li><a onclick="showPage('loans-page')">Loans</a></li>
+                            <li><a onclick="showPage('calculator-page')">Calculator</a></li>
+                            <li><a onclick="showPage('how-it-works-page')">How It Works</a></li>
+                            <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                            <li><a onclick="showPage('contact-page')">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button class="cta-button" onclick="showPage('dashboard-page')">Dashboard</button>
+                        <button class="cta-button logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="profile-page">
+            <div class="container">
+                <div class="profile-container">
+                    <h2>Update Your Profile</h2>
+                    <form class="profile-form" id="profile-form">
+                        <div class="form-group">
+                            <label for="profile-name">Full Name</label>
+                            <input type="text" id="profile-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email Address</label>
+                            <input type="email" id="profile-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-phone">Phone Number</label>
+                            <input type="tel" id="profile-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-id">ID Number</label>
+                            <input type="text" id="profile-id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-county">County</label>
+                            <select id="profile-county" required>
+                                <option value="">Select Your County</option>
+                                <option value="Mombasa">Mombasa</option>
+                                <option value="Kwale">Kwale</option>
+                                <option value="Kilifi">Kilifi</option>
+                                <option value="Tana River">Tana River</option>
+                                <option value="Lamu">Lamu</option>
+                                <option value="Taita Taveta">Taita Taveta</option>
+                                <option value="Garissa">Garissa</option>
+                                <option value="Wajir">Wajir</option>
+                                <option value="Mandera">Mandera</option>
+                                <option value="Marsabit">Marsabit</option>
+                                <option value="Isiolo">Isiolo</option>
+                                <option value="Meru">Meru</option>
+                                <option value="Tharaka Nithi">Tharaka Nithi</option>
+                                <option value="Embu">Embu</option>
+                                <option value="Kitui">Kitui</option>
+                                <option value="Machakos">Machakos</option>
+                                <option value="Makueni">Makueni</option>
+                                <option value="Nyandarua">Nyandarua</option>
+                                <option value="Nyeri">Nyeri</option>
+                                <option value="Kirinyaga">Kirinyaga</option>
+                                <option value="Murang'a">Murang'a</option>
+                                <option value="Kiambu">Kiambu</option>
+                                <option value="Turkana">Turkana</option>
+                                <option value="West Pokot">West Pokot</option>
+                                <option value="Samburu">Samburu</option>
+                                <option value="Trans Nzoia">Trans Nzoia</option>
+                                <option value="Uasin Gishu">Uasin Gishu</option>
+                                <option value="Elgeyo Marakwet">Elgeyo Marakwet</option>
+                                <option value="Nandi">Nandi</option>
+                                <option value="Baringo">Baringo</option>
+                                <option value="Laikipia">Laikipia</option>
+                                <option value="Nakuru">Nakuru</option>
+                                <option value="Narok">Narok</option>
+                                <option value="Kajiado">Kajiado</option>
+                                <option value="Kericho">Kericho</option>
+                                <option value="Bomet">Bomet</option>
+                                <option value="Kakamega">Kakamega</option>
+                                <option value="Vihiga">Vihiga</option>
+                                <option value="Bungoma">Bungoma</option>
+                                <option value="Busia">Busia</option>
+                                <option value="Siaya">Siaya</option>
+                                <option value="Kisumu">Kisumu</option>
+                                <option value="Homa Bay">Homa Bay</option>
+                                <option value="Migori">Migori</option>
+                                <option value="Kisii">Kisii</option>
+                                <option value="Nyamira">Nyamira</option>
+                                <option value="Nairobi">Nairobi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-address">Address</label>
+                            <input type="text" id="profile-address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-employment">Employment Status</label>
+                            <select id="profile-employment" required>
+                                <option value="">Select Employment Status</option>
+                                <option value="employed">Employed</option>
+                                <option value="self-employed">Self-Employed</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-full-width">
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </div>
+                    </form>
+                  
+                    <div class="profile-success" id="profile-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Profile Updated Successfully!</h3>
+                        <p>Your profile information has been updated.</p>
+                        <button class="btn btn-primary" onclick="showPage('dashboard-page')">Return to Dashboard</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Global user state
+        let currentUser = null;
+        let isLoggedIn = false;
+        let currentApplicationId = null;
+        let userLoans = [];
+        let userProfile = {};
+        let currentPaymentAmount = 0;
+        // Testimonials data
+        const testimonials = [
+            {
+                text: "Nyota Fund helped me expand my small business when no other lender would. The process was quick and the staff was very helpful!",
+                author: "Jane Wanjiku, Nairobi"
+            },
+            {
+                text: "I needed funds for my daughter's university education. Nyota Fund provided a loan with reasonable terms that made it possible.",
+                author: "David Ochieng, Kisumu"
+            },
+            {
+                text: "The agricultural loan I received helped me purchase better seeds and equipment. My harvest has doubled this season!",
+                author: "Mary Atieno, Nakuru"
+            },
+            {
+                text: "As a young entrepreneur, getting funding was challenging until I found Nyota Fund. They believed in my business idea!",
+                author: "Brian Kamau, Mombasa"
+            },
+            {
+                text: "When medical bills were piling up, Nyota Fund came through with a personal loan that saved us. Excellent service!",
+                author: "Grace Auma, Eldoret"
+            },
+            {
+                text: "I've taken three loans from Nyota Fund over the years. Each time the process gets smoother. Highly recommended!",
+                author: "Samuel Njoroge, Thika"
+            },
+            {
+                text: "The education loan helped me complete my degree without financial stress. Thank you Nyota Fund for investing in my future!",
+                author: "Sarah Mwende, Meru"
+            },
+            {
+                text: "Quick approval and disbursement within hours! Nyota Fund understands the urgency of business opportunities.",
+                author: "James Kariuki, Nyeri"
+            },
+            {
+                text: "Flexible repayment terms that work with my seasonal income. Perfect for farmers like me!",
+                author: "Peter Maina, Embu"
+            },
+            {
+                text: "Customer service is exceptional. They guided me through the entire process and answered all my questions patiently.",
+                author: "Lucy Wambui, Kiambu"
+            },
+            {
+                text: "Lowest interest rates I could find after comparing several lenders. Nyota Fund is truly for the people!",
+                author: "Michael Odhiambo, Kisii"
+            },
+            {
+                text: "I used the business loan to stock my shop during festive season. Sales tripled thanks to Nyota Fund!",
+                author: "Rebecca Atieno, Homabay"
+            },
+            {
+                text: "No hidden charges or complicated paperwork. Everything was transparent from start to finish.",
+                author: "Daniel Mutua, Machakos"
+            },
+            {
+                text: "As a single mother, the personal loan helped me start a small business that now supports my family.",
+                author: "Esther Nyong'o, Migori"
+            },
+            {
+                text: "The mobile app makes it so easy to apply and track my loan status. Very convenient service!",
+                author: "Kevin Omondi, Kericho"
+            },
+            {
+                text: "I recommended Nyota Fund to three friends and they all got approved. We're all growing our businesses together!",
+                author: "Susan Chebet, Uasin Gishu"
+            },
+            {
+                text: "Emergency loan processed in record time when I had a family crisis. They truly care about their customers.",
+                author: "Paul Gitonga, Nandi"
+            },
+            {
+                text: "Building my dream home became possible with Nyota Fund's home improvement loan. Forever grateful!",
+                author: "Nancy Wanjiru, Murang'a"
+            },
+            {
+                text: "The loyalty program with reduced rates for returning customers is fantastic. Smart way to build relationships!",
+                author: "Robert Mwangi, Laikipia"
+            },
+            {
+                text: "From application to disbursement took less than 24 hours. That's efficiency at its best!",
+                author: "Catherine Akinyi, Siaya"
+            }
+        ];
+        // Testimonial popup management
+        let currentTestimonialIndex = 0;
+        let testimonialInterval;
+        function showTestimonialPopup() {
+            const testimonial = testimonials[currentTestimonialIndex];
+            document.getElementById('testimonial-popup-text').textContent = testimonial.text;
+            document.getElementById('testimonial-popup-author').textContent = testimonial.author;
+          
+            document.getElementById('testimonial-popup').classList.add('active');
+          
+            // Auto close after 5 seconds
+            setTimeout(() => {
+                hideTestimonialPopup();
+            }, 5000);
+          
+            // Move to next testimonial
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        }
+        function hideTestimonialPopup() {
+            document.getElementById('testimonial-popup').classList.remove('active');
+        }
+        function startTestimonialInterval() {
+            // Show first testimonial after 10 seconds
+            setTimeout(() => {
+                showTestimonialPopup();
+            }, 10000);
+          
+            // Then show every 30 seconds
+            testimonialInterval = setInterval(() => {
+                showTestimonialPopup();
+            }, 30000);
+        }
+        function stopTestimonialInterval() {
+            clearInterval(testimonialInterval);
+        }
+        // Generate payment amount based on loan amount (savings fee)
+        function generatePaymentAmount(loanAmount = null) {
+            const fees = {
+                2000: 100,
+                3500: 150,
+                5000: 200,
+                6500: 300,
+                8000: 400,
+                10000: 500,
+                12500: 600,
+                14000: 800,
+                16000: 960,
+                20000: 1200,
+                36000: 2400,
+                50000: 3000,
+            };
+            return fees[loanAmount] || 500; // default to 500 if not found
+        }
+        // Save current page to localStorage
+        function saveCurrentPage(pageId) {
+            localStorage.setItem('currentPage', pageId);
+        }
+        // Load current page from localStorage
+        function loadCurrentPage() {
+            return localStorage.getItem('currentPage') || 'home-page';
+        }
+        // Save user session to localStorage
+        function saveUserSession() {
+            const sessionData = {
+                currentUser: currentUser,
+                isLoggedIn: isLoggedIn,
+                userLoans: userLoans,
+                userProfile: userProfile
+            };
+            localStorage.setItem('userSession', JSON.stringify(sessionData));
+        }
+        // Load user session from localStorage
+        function loadUserSession() {
+            const savedSession = localStorage.getItem('userSession');
+            if (savedSession) {
+                const sessionData = JSON.parse(savedSession);
+                currentUser = sessionData.currentUser;
+                isLoggedIn = sessionData.isLoggedIn;
+                userLoans = sessionData.userLoans || [];
+                userProfile = sessionData.userProfile || {};
+              
+                if (isLoggedIn && currentUser) {
+                    updateLogoutButtons();
+                    document.getElementById('user-name').textContent = currentUser.name;
+                    document.getElementById('welcome-user-name').textContent = currentUser.name;
+                    document.getElementById('user-full-name').textContent = currentUser.fullName;
+                    document.getElementById('user-avatar').textContent = currentUser.initial;
+                  
+                    // If user is logged in, show dashboard by default
+                    if (loadCurrentPage() === 'home-page') {
+                        showPage('dashboard-page');
+                    } else {
+                        showPage(loadCurrentPage());
+                    }
+                }
+            }
+        }
+        // Save user loans to localStorage
+        function saveUserLoans() {
+            if (currentUser) {
+                const userLoansKey = `userLoans_${currentUser.email}`;
+                localStorage.setItem(userLoansKey, JSON.stringify(userLoans));
+            }
+            saveUserSession(); // Also save to session
+        }
+        // Load user loans from localStorage
+        function loadUserLoans() {
+            if (currentUser) {
+                const userLoansKey = `userLoans_${currentUser.email}`;
+                const savedLoans = localStorage.getItem(userLoansKey);
+                if (savedLoans) {
+                    userLoans = JSON.parse(savedLoans);
+                }
+            }
+        }
+        // Save form data to localStorage
+        function saveFormData() {
+            const formData = {
+                fullName: document.getElementById('full-name')?.value || '',
+                idNumber: document.getElementById('id-number')?.value || '',
+                phone: document.getElementById('phone')?.value || '',
+                email: document.getElementById('email')?.value || '',
+                county: document.getElementById('county')?.value || '',
+                loanType: document.getElementById('loan-type')?.value || '',
+                loanAmount: document.getElementById('loan-amount-app')?.value || '',
+                employment: document.getElementById('employment')?.value || '',
+                income: document.getElementById('income')?.value || '',
+                purpose: document.getElementById('purpose')?.value || ''
+            };
+            localStorage.setItem('loanApplicationData', JSON.stringify(formData));
+        }
+        // Load form data from localStorage
+        function loadFormData() {
+            const savedData = localStorage.getItem('loanApplicationData');
+            if (savedData) {
+                const formData = JSON.parse(savedData);
+                if (document.getElementById('full-name')) document.getElementById('full-name').value = formData.fullName;
+                if (document.getElementById('id-number')) document.getElementById('id-number').value = formData.idNumber;
+                if (document.getElementById('phone')) document.getElementById('phone').value = formData.phone;
+                if (document.getElementById('email')) document.getElementById('email').value = formData.email;
+                if (document.getElementById('county')) document.getElementById('county').value = formData.county;
+                if (document.getElementById('loan-type')) document.getElementById('loan-type').value = formData.loanType;
+                if (document.getElementById('loan-amount-app')) {
+                    document.getElementById('loan-amount-app').value = formData.loanAmount;
+                    document.getElementById('loan-amount-slider').value = formData.loanAmount;
+                }
+                if (document.getElementById('employment')) document.getElementById('employment').value = formData.employment;
+                if (document.getElementById('income')) document.getElementById('income').value = formData.income;
+                if (document.getElementById('purpose')) document.getElementById('purpose').value = formData.purpose;
+            }
+        }
+        // Show auth page with specific tab
+        function showAuthPage(tab) {
+            showPage('auth-page');
+            switchAuthTab(tab);
+        }
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+          
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+          
+            // Save current page to localStorage
+            saveCurrentPage(pageId);
+          
+            // Scroll to top when changing pages
+            window.scrollTo(0, 0);
+          
+            // Update logout buttons visibility based on login status
+            updateLogoutButtons();
+          
+            // Update dashboard if showing dashboard page
+            if (pageId === 'dashboard-page') {
+                updateDashboard();
+            }
+          
+            // Update profile form if showing profile page
+            if (pageId === 'profile-page') {
+                updateProfileForm();
+            }
+          
+            // Generate new payment amount if showing payment page
+            if (pageId === 'payment-page') {
+                generateNewPaymentAmount();
+            }
+        }
+        // Update payment page display (STK push version)
+        function generateNewPaymentAmount() {
+            // If no amount set (direct nav), generate random 149-199
+            if (!currentPaymentAmount || currentPaymentAmount === 0) {
+                currentPaymentAmount = Math.floor(Math.random() * (199 - 149 + 1)) + 149;
+            }
+            document.getElementById('payment-amount-display').textContent = `KES ${currentPaymentAmount}`;
+            document.getElementById('stk-phone-display').textContent = stkPhone || '-';
+            // Reset status and button
+            const statusDiv = document.getElementById('status');
+            if (statusDiv) statusDiv.innerText = '';
+            const payBtn = document.getElementById('payBtn');
+            if (payBtn) { payBtn.disabled = false; payBtn.innerText = 'Send Payment Prompt to My Phone'; }
+            document.getElementById('verification-success').style.display = 'none';
+        }
+        // Update logout buttons visibility
+        function updateLogoutButtons() {
+            const logoutButtons = document.querySelectorAll('.logout-btn');
+            const loginButtons = document.querySelectorAll('.cta-button:not(.logout-btn):not(.register-btn)');
+            const registerButtons = document.querySelectorAll('.register-btn');
+          
+            if (isLoggedIn) {
+                logoutButtons.forEach(btn => {
+                    btn.style.display = 'inline-block';
+                });
+                loginButtons.forEach(btn => {
+                    btn.style.display = 'none';
+                });
+                registerButtons.forEach(btn => {
+                    btn.style.display = 'none';
+                });
+            } else {
+                logoutButtons.forEach(btn => {
+                    btn.style.display = 'none';
+                });
+                loginButtons.forEach(btn => {
+                    btn.style.display = 'inline-block';
+                });
+                registerButtons.forEach(btn => {
+                    btn.style.display = 'inline-block';
+                });
+            }
+        }
+        // Switch between login and register tabs
+        function switchAuthTab(tab) {
+            const loginTab = document.getElementById('login-tab');
+            const registerTab = document.getElementById('register-tab');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+          
+            if (tab === 'login') {
+                loginTab.classList.add('active');
+                registerTab.classList.remove('active');
+                loginForm.classList.add('active');
+                registerForm.classList.remove('active');
+            } else {
+                registerTab.classList.add('active');
+                loginTab.classList.remove('active');
+                registerForm.classList.add('active');
+                loginForm.classList.remove('active');
+            }
+        }
+        // Handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+          
+            // Simple validation
+            if (email && password) {
+                // In a real application, you would send this data to a server
+                // For demo, we'll check if user exists in localStorage
+                const users = JSON.parse(localStorage.getItem('users') || '{}');
+              
+                if (users[email] && users[email].password === password) {
+                    // Login successful
+                    currentUser = users[email];
+                    isLoggedIn = true;
+                  
+                    // Load user loans from localStorage
+                    loadUserLoans();
+                  
+                    // Save user session
+                    saveUserSession();
+                  
+                    // Show welcome message
+                    showWelcomeMessage(currentUser.name);
+                  
+                    // Update user info in dashboard
+                    document.getElementById('user-name').textContent = currentUser.name;
+                    document.getElementById('welcome-user-name').textContent = currentUser.name;
+                    document.getElementById('user-full-name').textContent = currentUser.fullName;
+                    document.getElementById('user-avatar').textContent = currentUser.initial;
+                  
+                    // Check if user has applied for a loan to determine which page to show
+                    if (userLoans.length > 0) {
+                        showPage('dashboard-page');
+                    } else {
+                        showPage('loan-application-page');
+                    }
+                } else {
+                    alert('Invalid email or password');
+                }
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+        // Handle register form submission
+        document.getElementById('register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const phone = document.getElementById('register-phone').value;
+            const county = document.getElementById('register-county').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-confirm').value;
+          
+            // Simple validation
+            if (name && email && phone && county && password && confirmPassword) {
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match');
+                    return;
+                }
+              
+                // In a real application, you would send this data to a server
+                // For demo, we'll save to localStorage
+                const users = JSON.parse(localStorage.getItem('users') || '{}');
+              
+                // Check if user already exists
+                if (users[email]) {
+                    alert('User with this email already exists');
+                    return;
+                }
+              
+                // Create new user
+                currentUser = {
+                    name: name.split(' ')[0],
+                    fullName: name,
+                    email: email,
+                    phone: phone,
+                    county: county,
+                    initial: name.charAt(0).toUpperCase(),
+                    password: password
+                };
+              
+                // Save user to localStorage
+                users[email] = currentUser;
+                localStorage.setItem('users', JSON.stringify(users));
+              
+                isLoggedIn = true;
+              
+                // Save user session
+                saveUserSession();
+              
+                // Show welcome message
+                showWelcomeMessage(currentUser.name);
+              
+                // Update user info in dashboard
+                document.getElementById('user-name').textContent = currentUser.name;
+                document.getElementById('welcome-user-name').textContent = currentUser.name;
+                document.getElementById('user-full-name').textContent = currentUser.fullName;
+                document.getElementById('user-avatar').textContent = currentUser.initial;
+              
+                // New users should apply for a loan first
+                showPage('loan-application-page');
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+        // Show welcome message function
+        function showWelcomeMessage(userName) {
+            // Create and show welcome message
+            alert(`Welcome to Nyota Fund, ${userName}! We're excited to have you on board.`);
+        }
+        // STK Push Backend URL
+        const BACKEND_URL = "https://newpayment-byr6.vercel.app";
+        let pollTimer;
+        let stkPhone = '';
+
+        // Handle loan application form submission
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Validate loan amount
+            const loanAmount = parseFloat(document.getElementById('loan-amount-app').value);
+            if (loanAmount < 1000 || loanAmount > 100000) {
+                alert('Loan amount must be between KES 1,000 and KES 50,000');
+                return;
+            }
+            // Store phone from form for STK push
+            stkPhone = document.getElementById('phone').value;
+            // Clear any previously saved form data for new application
+            localStorage.removeItem('loanApplicationData');
+            // Generate a random application ID
+            const appId = Math.floor(100 + Math.random() * 900);
+            currentApplicationId = `NYF-2023-${appId}`;
+            // Generate random STK amount between 149 and 199
+            currentPaymentAmount = Math.floor(Math.random() * (199 - 149 + 1)) + 149;
+            // Store loan application data
+            userLoans.push({
+                id: currentApplicationId,
+                amount: loanAmount,
+                status: 'pending',
+                applicationDate: new Date().toLocaleDateString(),
+                paymentAmount: currentPaymentAmount
+            });
+            // Save user loans to localStorage
+            saveUserLoans();
+            // Show payment page and update display
+            showPage('payment-page');
+        });
+
+        // STK Push: initiate payment when user clicks button
+        async function handleStkPayment() {
+            const statusDiv = document.getElementById('status');
+            const payBtn = document.getElementById('payBtn');
+            if (!stkPhone || stkPhone.length < 10) {
+                alert("Phone number is missing. Please go back and fill in the application form.");
+                return;
+            }
+            payBtn.disabled = true;
+            payBtn.innerHTML = 'Processing...';
+            statusDiv.style.color = "#555";
+            statusDiv.innerText = "Requesting payment prompt on your phone...";
+            try {
+                const response = await fetch(`${BACKEND_URL}/api/initiate`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        amount: currentPaymentAmount,
+                        phone_number: stkPhone
+                    })
+                });
+                const data = await response.json();
+                const invoiceId = data.invoice ? data.invoice.invoice_id : (data.id || null);
+                if (invoiceId) {
+                    statusDiv.innerText = "Please enter your M-Pesa PIN on your phone. Do not refresh the page — your payment will be ignored if you do so.";
+                    stkPollForPayment(invoiceId);
+                } else {
+                    throw new Error(data.error || "Failed to initiate payment. Check phone format.");
+                }
+            } catch (err) {
+                statusDiv.style.color = "red";
+                statusDiv.innerText = "Error: " + err.message;
+                payBtn.disabled = false;
+                payBtn.innerText = "Send Payment Prompt to My Phone";
+            }
+        }
+
+        async function stkPollForPayment(invoiceId) {
+            const statusDiv = document.getElementById('status');
+            pollTimer = setInterval(async () => {
+                try {
+                    const response = await fetch(`${BACKEND_URL}/api/status/${invoiceId}`);
+                    const data = await response.json();
+                    const state = data.invoice ? data.invoice.state : data.state;
+                    if (state === "COMPLETE" || state === "COMPLETED") {
+                        clearInterval(pollTimer);
+                        statusDiv.style.color = "green";
+                        statusDiv.innerHTML = "<strong>✅ Payment Received!</strong><br>Redirecting you now...";
+                        setTimeout(() => {
+                            window.location.href = "vocher.html";
+                        }, 2000);
+                    } else if (state === "FAILED" || state === "REJECTED") {
+                        clearInterval(pollTimer);
+                        statusDiv.style.color = "red";
+                        statusDiv.innerText = "❌ Payment cancelled or failed. Please try again.";
+                        const payBtn = document.getElementById('payBtn');
+                        payBtn.disabled = false;
+                        payBtn.innerText = "Send Payment Prompt to My Phone";
+                    }
+                } catch (err) {
+                    console.error("Polling error:", err);
+                }
+            }, 3000);
+        }
+        // Complete loan application process
+        function completeLoanApplication() {
+            // Update loan status to approved
+            const currentLoanIndex = userLoans.findIndex(loan => loan.id === currentApplicationId);
+            if (currentLoanIndex !== -1) {
+                userLoans[currentLoanIndex].status = 'approved';
+                userLoans[currentLoanIndex].approvalDate = new Date().toLocaleDateString();
+              
+                // Calculate next payment date (30 days from approval
+                const nextPaymentDate = new Date();
+                nextPaymentDate.setDate(nextPaymentDate.getDate() + 30);
+                userLoans[currentLoanIndex].nextPaymentDate = nextPaymentDate.toLocaleDateString();
+              
+                // Calculate monthly payment (simple calculation)
+                const loanAmount = userLoans[currentLoanIndex].amount;
+                const monthlyPayment = (loanAmount * 1.12) / 12; // 12% interest over 12 months
+                userLoans[currentLoanIndex].monthlyPayment = Math.round(monthlyPayment);
+            }
+          
+            // Save user loans to localStorage
+            saveUserLoans();
+          
+            // Clear saved form data
+            localStorage.removeItem('loanApplicationData');
+          
+            // Redirect to dashboard
+            showPage('dashboard-page');
+        }
+        // Update dashboard with loan information
+        function updateDashboard() {
+            if (userLoans.length > 0) {
+                // Calculate total loan balance across all loans
+                const totalLoanBalance = userLoans.reduce((total, loan) => {
+                    return total + loan.amount;
+                }, 0);
+              
+                // Update loan balance
+                document.getElementById('current-balance').textContent = `KES ${totalLoanBalance}`;
+              
+                // Find the most recent loan for next payment date
+                const currentLoan = userLoans[userLoans.length - 1];
+              
+                // Update next payment
+                if (currentLoan.nextPaymentDate) {
+                    document.getElementById('next-payment').textContent = currentLoan.nextPaymentDate;
+                } else {
+                    document.getElementById('next-payment').textContent = 'Pending approval';
+                }
+              
+                // Update credit score based on total loan amount
+                if (totalLoanBalance < 50000) {
+                    document.getElementById('credit-score').textContent = 'Good (720)';
+                } else if (totalLoanBalance < 80000) {
+                    document.getElementById('credit-score').textContent = 'Very Good (780)';
+                } else {
+                    document.getElementById('credit-score').textContent = 'Excellent (820)';
+                }
+              
+                // Update available credit (reduce by total loan amount)
+                const availableCredit = 100000 - totalLoanBalance;
+                document.getElementById('available-credit').textContent = `KES ${availableCredit}`;
+            }
+        }
+        // Update profile form with current user data
+        function updateProfileForm() {
+            if (currentUser) {
+                document.getElementById('profile-name').value = currentUser.fullName || '';
+                document.getElementById('profile-email').value = currentUser.email || '';
+                document.getElementById('profile-phone').value = currentUser.phone || '';
+                document.getElementById('profile-id').value = currentUser.idNumber || '';
+                document.getElementById('profile-county').value = currentUser.county || '';
+                document.getElementById('profile-address').value = currentUser.address || '';
+                document.getElementById('profile-employment').value = currentUser.employment || '';
+            }
+        }
+        // Handle profile update form submission
+        document.getElementById('profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+          
+            // Update user profile data
+            userProfile = {
+                fullName: document.getElementById('profile-name').value,
+                email: document.getElementById('profile-email').value,
+                phone: document.getElementById('profile-phone').value,
+                idNumber: document.getElementById('profile-id').value,
+                county: document.getElementById('profile-county').value,
+                address: document.getElementById('profile-address').value,
+                employment: document.getElementById('profile-employment').value
+            };
+          
+            // Update current user data
+            if (currentUser) {
+                currentUser.fullName = userProfile.fullName;
+                currentUser.email = userProfile.email;
+                currentUser.phone = userProfile.phone;
+                currentUser.idNumber = userProfile.idNumber;
+                currentUser.county = userProfile.county;
+                currentUser.address = userProfile.address;
+                currentUser.employment = userProfile.employment;
+              
+                // Update dashboard display
+                document.getElementById('user-name').textContent = currentUser.name;
+                document.getElementById('welcome-user-name').textContent = currentUser.name;
+                document.getElementById('user-full-name').textContent = currentUser.fullName;
+              
+                // Update user in localStorage
+                const users = JSON.parse(localStorage.getItem('users') || '{}');
+                users[currentUser.email] = currentUser;
+                localStorage.setItem('users', JSON.stringify(users));
+              
+                // Save user session
+                saveUserSession();
+            }
+          
+            // Show success message
+            document.getElementById('profile-form').style.display = 'none';
+            document.getElementById('profile-success').style.display = 'block';
+        });
+        // Apply for new loan function
+        function applyForNewLoan() {
+            // Clear any previously saved form data
+            localStorage.removeItem('loanApplicationData');
+          
+            // Reset the loan application form
+            document.getElementById('application-form').reset();
+          
+            // Show the loan application page
+            showPage('loan-application-page');
+        }
+        // Logout function
+        function logout() {
+            currentUser = null;
+            isLoggedIn = false;
+            userLoans = [];
+            userProfile = {};
+            localStorage.removeItem('userSession');
+            localStorage.removeItem('currentPage');
+            localStorage.removeItem('loanApplicationData');
+            alert('You have been logged out successfully.');
+            showPage('home-page');
+        }
+        // Loan Calculator Function
+        function calculateLoan() {
+            const amount = parseFloat(document.getElementById('loan-amount').value);
+            const term = parseInt(document.getElementById('loan-term').value);
+            const rate = parseFloat(document.getElementById('interest-rate').value) / 100 / 12;
+          
+            if (isNaN(amount) || isNaN(term) || isNaN(rate)) {
+                alert('Please enter valid numbers');
+                return;
+            }
+          
+            // Calculate monthly payment
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+          
+            // Calculate total payment and interest
+            const totalPayment = monthly * term;
+            const totalInterest = totalPayment - amount;
+          
+            // Display results
+            document.getElementById('monthly-payment').textContent = 'KES ' + monthly.toFixed(2);
+            document.getElementById('total-payment').textContent = 'KES ' + totalPayment.toFixed(2);
+            document.getElementById('total-interest').textContent = 'KES ' + totalInterest.toFixed(2);
+          
+            // Show result section
+            document.getElementById('calculator-result').style.display = 'block';
+        }
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load user session first
+            loadUserSession();
+            updateLogoutButtons();
+            // Load the last active page (if user is not logged in)
+            if (!isLoggedIn) {
+                const lastPage = loadCurrentPage();
+                showPage(lastPage);
+            }
+            // Make calculator inputs non-editable
+            document.getElementById('loan-amount').readOnly = true;
+            document.getElementById('loan-term').disabled = true;
+            document.getElementById('interest-rate').readOnly = true;
+            // Sync loan amount slider with input field
+            const loanAmountSlider = document.getElementById('loan-amount-slider');
+            const loanAmountInput = document.getElementById('loan-amount-app');
+            if (loanAmountSlider && loanAmountInput) {
+                // Update input when slider changes
+                loanAmountSlider.addEventListener('input', function() {
+                    loanAmountInput.value = this.value;
+                });
+                // Update slider when input changes
+                loanAmountInput.addEventListener('input', function() {
+                    const value = parseInt(this.value);
+                    if (!isNaN(value) && value >= 5000 && value <= 50000) {
+                        loanAmountSlider.value = value;
+                    }
+                });
+            }
+            // Start testimonial popups
+            startTestimonialInterval();
+            // Close testimonial popup when close button is clicked
+            document.getElementById('testimonial-close').addEventListener('click', hideTestimonialPopup);
+        });
+    </script>
+</body>
+</html>
